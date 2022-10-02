@@ -94,3 +94,7 @@ label {
   margin-bottom: 10rem;
   border-radius: 0;
 }
+textarea {
+  background-color: #D7DBD9;
+  margin-top: 6px;
+}
