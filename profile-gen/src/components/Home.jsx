@@ -39,16 +39,16 @@ const Home = () => {
   const handleschoolChange = (event) => {
     setSchool(event.target.value);
   };
-  const handlemajor = (event) => {
+  const handlemajorChange = (event) => {
     setMajor(event.target.value);
   };
-  const handleoccupation = (event) => {
+  const handleoccupationChange = (event) => {
     setOccupation(event.target.value);
   };
-  const handlerel = (event) => {
+  const handlerelationChange = (event) => {
     setRel(event.target.value);
   };
-  const handlereason = (event) => {
+  const handlereasonChange = (event) => {
     setReason(event.target.value);
   };
 
@@ -57,7 +57,7 @@ const Home = () => {
     setIsLocationChecked(!isLocationChecked);
   };
   return (
-    <Box>
+    <>
       <Box className="container">
         <div id="settings">
           <div className="heading"><h2>Options</h2></div>
@@ -82,9 +82,6 @@ const Home = () => {
               <input type="text" name="location-textbox" value={location} onChange={handlelocationChange} />
               <button>Random Location</button> 
 
-
-
-              
             </div>
             {/* School */}
             <div className="bio-element">
@@ -125,8 +122,17 @@ const Home = () => {
             </div>
           </form>
         </div>
+      
+      <div className="results-box">
+        <div className="heading"><h2>Results</h2></div>
+        <div className="bio-output">
+          <p>
+					Heather is from Southern Utah. She is studying English at BYU. She was raised to be very religious, leads a local Bible study group. She is trying to figure out if religion works for her and for her future.
+				</p>
+        </div>
+      </div>
       </Box>
-    </Box>
+    </>
   );
 };
 

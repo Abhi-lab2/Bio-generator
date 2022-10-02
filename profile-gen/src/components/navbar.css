@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #96908b;
+  background-color: #a19d98;
   height: 68px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
@@ -20,4 +20,9 @@
   justify-content: center;
   text-align: center;
   /* border: 1px solid red; */
+}
+.navItems > h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
 }

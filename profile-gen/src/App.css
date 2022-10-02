@@ -45,11 +45,12 @@
   justify-content: center;
   flex-wrap: wrap;
 } */
-.App{
+.App {
   background-size: cover;
-background-image: url(https://wallpapercave.com/wp/wp2925459.png);
-background-color: #f3fff8;
-background-blend-mode: multiply;
-color: #222;
-font-family: 'Arial', sans-serif;
+  background-image: url(https://wallpapercave.com/wp/wp2925459.png);
+  background-color: #f3fff8;
+  background-blend-mode: multiply;
+  color: #222;
+  font-family: "Arial", sans-serif;
+  
 }
