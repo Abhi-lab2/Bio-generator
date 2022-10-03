@@ -68,13 +68,23 @@ const Home = () => {
   const handleBoxMissionrisnChange = () => {
     setIsMeetChecked(!isMeetChecked);
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+  // Random Buttons
+  const randomNames = () => {
+    let names = [
+        "John", "Will", "Jerry", "Rayan", "Mike", "Harry", "Bob", "Popaye", "kayle"
+    ]
+    namechange(names[Math.floor(Math.random() * names.length)])
+}
   return (
     <>
       <Box className="container">
         <div id="settings">
           <div className="heading"><h2>Options</h2></div>
 
-          <form>
+          {/* <form onSubmit={handleSubmit}> */}
             <div className="bio-element">
               <label htmlFor="person-name-textbox">Name</label>
               <input type="text" name="person-name-textbox" value={namechange} onChange={handleNameChange} />
@@ -83,7 +93,7 @@ const Home = () => {
                 <option value="male">male</option>
                 <option value="female">female</option>
               </select>
-              <button >Random Name</button>
+              <button  onClick={randomNames}>Random Name</button>
             </div>
             {/* location */}
             <div className="bio-element">
@@ -92,7 +102,7 @@ const Home = () => {
                 Location{" "}
               </label>
               <input type="text" name="location-textbox" value={location} onChange={handlelocationChange} />
-              <button>Random Location</button>
+              <button onClick={randomNames}>Random Location</button>
             </div>
 
             {/* School */}
@@ -133,14 +143,14 @@ const Home = () => {
               </label>
               <br />
               <textarea name="desire-textbox" id="desire-text" type="text" value={reason} onChange={handlereasonChange}></textarea> <br />
-              <button style={{backgroundColor:"#D3BCA2"}}>Restoration</button>
-              <button style={{backgroundColor:"#ACD4AD"}}>Plan of Salvation</button>
-              <button style={{backgroundColor:"#ACAED3"}}>Gospal of Christ</button>
-              <button style={{backgroundColor:"#DEAEBA"}}>Law of Charitity</button>
-              <button style={{backgroundColor:"#C6A2C6"}}>Word of Wisdom</button>
-              <button style={{backgroundColor:"#CDCFCE"}}>Any Lesson</button>
+              <button style={{ backgroundColor: "#D3BCA2" }}>Restoration</button>
+              <button style={{ backgroundColor: "#ACD4AD" }}>Plan of Salvation</button>
+              <button style={{ backgroundColor: "#ACAED3" }}>Gospal of Christ</button>
+              <button style={{ backgroundColor: "#DEAEBA" }}>Law of Charitity</button>
+              <button style={{ backgroundColor: "#C6A2C6" }}>Word of Wisdom</button>
+              <button style={{ backgroundColor: "#CDCFCE" }}>Any Lesson</button>
             </div>
-          </form>
+          {/* </form> */}
         </div>
 
         <div className="results-box">
@@ -150,11 +160,11 @@ const Home = () => {
           <div className="bio-output">
             <p>
               {/* Heather is from Southern Utah. She is studying English at BYU. She was raised to be very religious, leads a local Bible study group. She is trying to figure out if religion works for her and for her future. */}
-              {namechange} {isLocationChecked ? `is from ${location},` : null}
-              {isSchoolChecked ? `${gender === 'male' ? "he" : "she"} is studying ${major} at ${school}` : null }
-              {isOccupationChecked ? `${gender === "male" ? "He" : "She"} currently works as a fishing guide on the Provo river.` : null }
-              {isReligousChecked ? `without much religious experience, but has made a lot of friends who are members of the Church while attending school` : null}
-              {isMeetChecked ? `believes that meeting with the missionaries will help to be a more spiritual and righteous person` : null}
+              {namechange} {isLocationChecked ? `is from ${location}, ` : null}
+              {isSchoolChecked ? `${gender === 'male' ? "he" : "she"} is studying ${major} at ${school}. ` : null}
+              {isOccupationChecked ? `${gender === "male" ? "He" : "She"} currently works as a fishing guide on the Provo river, ` : null}
+              {isReligousChecked ? `without much religious experience, but has made a lot of friends who are members of the Church while attending school. ` : null}
+              {isMeetChecked ? `${gender === "male" ? "He" : "She"} believes that meeting with the missionaries will help to be a more spiritual and righteous person` : null}
             </p>
           </div>
         </div>
