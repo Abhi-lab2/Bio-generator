@@ -189,6 +189,7 @@ const Home = (props) => {
           {/* </form> */}
         </div>
 
+        {/* Resullts DIV */}
         <div className="results-box">
           <div className="heading">
             <h2>Results</h2>
@@ -210,3 +211,4 @@ const Home = (props) => {
 };
 
 export default Home;
+
